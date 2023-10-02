@@ -1,0 +1,41 @@
+<div class="container mt-4">
+    <div class="row">
+        <div class="col-2">
+            <div class="list-group">
+                <a href="#" class="list-group-item list-group-item-action active" aria-current="true">
+                    Selecciona una Opcion
+                </a>
+                <a routerLink="/new-admin" class="list-group-item list-group-item-action">Nuevo Administrador</a>
+                <a routerLink="/helps" class="list-group-item list-group-item-action">Ayudas</a>
+                <a routerLink="/info" class="list-group-item list-group-item-action">Informativo</a>
+                <a routerLink="/mensaje" class="list-group-item list-group-item-action">Mensaje</a>
+              </div>
+        </div>
+
+        <div class="col-1"></div>
+        
+        <div class="col-7 border mt-4">
+            <h1>Mensaje a la Comunidad</h1>
+            <div class="row">
+                <div class="col-6 ">
+                    <div class="form-floating mb-1 mt-4">
+                        <input [(ngModel)]="msj.titulo" type="text" maxlength="50" class="form-control" id="mensaje" placeholder="Mensaje" required>
+                        <label for="floatingInput">Titulo Mensaje</label>
+                    </div>
+                </div>
+                <div class="col-6">
+                    
+                    <div class="mb-3">
+                        <label for="exampleFormControlTextarea1" class="form-label">Descripcion del mensaje</label>
+                        <textarea [(ngModel)]="msj.descripcion" maxlength="200"class="form-control" id="descripcion" rows="3" required></textarea>
+                    </div>
+                </div>
+            </div>
+    </div>
+    <div class="container text-center mt-4">
+        <button class="btn btn-primary mb-1" (click)="insertmsj()" >Ingresar</button>
+    </div>
+</div>
+
+
+<router-outlet>

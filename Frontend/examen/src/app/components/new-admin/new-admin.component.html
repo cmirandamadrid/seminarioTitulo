@@ -1,0 +1,74 @@
+<div class="container-fluid mt-4">
+    <div class="row">
+        <div class="col-2">
+            <div class="list-group">
+                <a href="#" class="list-group-item list-group-item-action active" aria-current="true">
+                    Selecciona una Opcion
+                </a>
+                <a routerLink="/new-admin" class="list-group-item list-group-item-action">Nuevo Administrador</a>
+                <a routerLink="/helps" class="list-group-item list-group-item-action">Ayudas</a>
+                <a routerLink="/info" class="list-group-item list-group-item-action">Informativo</a>
+                <a routerLink="/mensaje" class="list-group-item list-group-item-action">Mensaje</a>
+              </div>
+        </div>
+
+        <div class="col-1"></div>
+        
+        <div class="col-7 border mt-4">
+            <h1>Crea Usuario</h1>
+            <div class="row">
+                <div class="col-6 ">
+                    <div class="form-floating mb-1 mt-4">
+                        <input type="text" maxlength="50" class="form-control" id="usuario" placeholder="Crea Usuario" required>
+                        <label for="floatingInput">usuario</label>
+                    </div>
+
+                    <div class="form-floating mb-1 mt-4">
+                        <input type="password" maxlength="50" class="form-control" id="password" placeholder="Crea password" required>
+                        <label for="floatingInput">Password</label>
+                    </div>
+
+                    <div class="form-floating mb-1 mt-4">
+                        <input type="email" maxlength="100"class="form-control" id="email" placeholder="Email" required>
+                        <label for="floatingInput">Email</label>
+                    </div>
+
+                    <select class="form-select mb-1 mt-4" aria-label="Default select example">
+                        <option selected>Tipo Perfil</option>
+                        <option value="Adm">Administrador</option>
+                    </select>
+                </div>
+
+
+
+
+                <div class="col-6">
+                    <div class="form-floating mb-1 mt-4">
+                        <input type="text" maxlength="50" class="form-control" id="nombre" placeholder="Primer Nombre" required>
+                        <label for="floatingInput">Primer Nombre</label>
+                    </div>
+
+                    <div class="form-floating mb-1 mt-4">
+                        <input type="text" maxlength="50" class="form-control" id="apellidoPaterno" placeholder="Apellido Paterno" required>
+                        <label for="floatingInput">Primer Nombre</label>
+                    </div>
+
+                    <div class="form-floating mb-1 mt-4">
+                        <input type="text" maxlength="50" class="form-control" id="apellidoMaterno" placeholder="Apellido Materno" required>
+                        <label for="floatingInput">Primer Nombre</label>
+                    </div>
+
+                    <div class="form-floating mb-1 mt-4">
+                        <input type="text" maxlength="50" class="form-control" id="telefono" placeholder="Número Telefónico">
+                        <label for="floatingInput">Número Telefónico</label>
+                    </div>
+                </div>
+            </div>
+    </div>
+    <div class="container text-center mt-4">
+        <button class="btn btn-primary mb-1 " >Guardar</button>
+    </div>
+</div>
+
+
+<router-outlet>
